@@ -10,8 +10,6 @@ public interface BoardService {
 
 	String create(BoardVO vo) throws Exception;
 
-	List<BoardVO> listAll() throws Exception;
-
 	BoardVO read(int bno) throws Exception;
 
 	void modify(BoardVO vo) throws Exception;

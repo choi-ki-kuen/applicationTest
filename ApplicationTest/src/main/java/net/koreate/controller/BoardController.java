@@ -31,7 +31,6 @@ public class BoardController {
 	
 	@RequestMapping(value="/registerBoard", method=RequestMethod.POST)
 	public String registerBoard(@ModelAttribute("boardVO") BoardVO vo,
-								@RequestParam("title") String title,
 								RedirectAttributes rttr) throws Exception{
 		System.out.println(vo);
 		String result = service.create(vo);
@@ -70,7 +69,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/delete")
-	public String delete(@RequestParam("bno") int bno) throws Exception{
+	public String delete(@RequestParam("no") int bno) throws Exception{
 		System.out.println("delete bno : " + bno);
 		service.delete(bno);
 		return "redirect:/board/listPage";

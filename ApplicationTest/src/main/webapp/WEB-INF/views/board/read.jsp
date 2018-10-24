@@ -34,8 +34,6 @@
 		
 	$("#listBtn").click(function(){
 		location.href="/board/listPage";
-		/* form.attr("action","/board/listPage");
-		form.submit(); */
 	});
 	
 </script>	
