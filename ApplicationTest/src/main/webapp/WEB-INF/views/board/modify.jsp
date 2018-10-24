@@ -17,7 +17,7 @@
 	TITLE : <input type="text" name="title" value="${boardVO.title}"/><br/>
 	WRITER : <input type="text" name="writer" value="${boardVO.writer}"/><br/>
 	CONTENT : <textarea name="content">${boardVO.content}</textarea>
-	<input type="hidden" name="bno" value="${boardVO.bno}"/>
+	<input type="hidden" name="bno" value="${boardVO.bno}"/><br/>
 	<input type="submit"/> <input type="button" onclick="listPage();" value="ALL LIST"/>
 	
 	</form>

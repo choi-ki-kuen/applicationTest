@@ -23,6 +23,9 @@ public class PageMaker {
 		}
 		
 		prev = startPage == 1 ?false:true;
+		
+		
+		System.out.println("Local Test");
 		next = endPage * cri.getPerPageNum() >= totalCount ? false : true;
 		
 	}
