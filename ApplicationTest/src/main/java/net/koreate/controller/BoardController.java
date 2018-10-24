@@ -29,33 +29,6 @@ public class BoardController {
 		return "board/register";
 	}
 	
-	/*@RequestMapping(value="/registerBoard", method=RequestMethod.POST)
-	public String registerBoard(HttpServletRequest request) {
-		String title = request.getParameter("title");
-		String content = request.getParameter("content");
-		String writer = request.getParameter("writer");
-		
-		System.out.println("title :" + title);
-		System.out.println("content :" + content);
-		System.out.println("writer :" + writer);
-		
-		BoardVO vo = new BoardVO();
-		vo.setTitle(title);
-		vo.setContent(content);
-		vo.setWriter(writer);
-		System.out.println(vo);
-		return "board/listPage";
-	}*/
-	
-	/*@RequestMapping(value="/registerBoard", method=RequestMethod.POST)
-	public String registerBoard(BoardVO vo, Model model) throws Exception{
-		System.out.println(vo);
-		service.create(vo);
-		//model.addAttribute("boardVO",vo);
-		model.addAttribute(vo);
-		return "board/listPage";
-	}*/
-	
 	@RequestMapping(value="/registerBoard", method=RequestMethod.POST)
 	public String registerBoard(@ModelAttribute("boardVO") BoardVO vo,
 								@RequestParam("title") String title,
@@ -69,7 +42,6 @@ public class BoardController {
 	@RequestMapping(value="/listPage",method=RequestMethod.GET)
 	public String listPage(@ModelAttribute("cri") Criteria cri,Model model) throws Exception {
 		List<BoardVO> boardList = null;
-		//boardList = service.listAll();
 		boardList = service.listPage(cri);
 		model.addAttribute("boardList",boardList);
 		model.addAttribute("pageMaker",service.getPageMaker(cri));

@@ -1,5 +1,6 @@
 package net.koreate.vo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BoardVO {
@@ -43,8 +44,8 @@ public class BoardVO {
 		this.writer = writer;
 	}
 	
-	public Date getRegdate() {
-		return regdate;
+	public String getRegdate() {
+		return new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(this.regdate);
 	}
 
 	public void setRegdate(Date regdate) {

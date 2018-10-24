@@ -19,9 +19,9 @@
 	
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-		<property name="url" value="jdbc:mysql://localhost:3306/myaccount?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Asia/Seoul"/> 
-		<property name="username" value="myaccount"/> 
-		<property name="password" value="1234" /> 
+		<property name="url" value="jdbc:mysql://192.168.2.239:3306/mydata?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Asia/Seoul"/> 
+		<property name="username" value="java"/> 
+		<property name="password" value="java" /> 
 	</bean>   
 		
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
@@ -36,7 +36,6 @@
 	
 	<mybatis-spring:scan base-package="net.koreate.dao"/>
 	
-	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>	
 	<context:component-scan base-package="net.koreate.dao"></context:component-scan>
 	<context:component-scan base-package="net.koreate.service"></context:component-scan>
 </beans>
