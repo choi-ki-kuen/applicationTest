@@ -14,8 +14,7 @@ public class PageMaker {
 	public void calData() {
 		endPage = (int)(Math.ceil(cri.getPage()/(double)displayPageNum)*displayPageNum);
 		startPage = (endPage - displayPageNum)+1;
-		// 12275 / 5 = 2455
-		//  2453
+
 		int temp = (int)(Math.ceil(totalCount/(double)cri.getPerPageNum()));
 		
 		if(endPage > temp) {
@@ -24,8 +23,6 @@ public class PageMaker {
 		
 		prev = startPage == 1 ?false:true;
 		
-		
-		System.out.println("Local Test");
 		next = endPage * cri.getPerPageNum() >= totalCount ? false : true;
 		
 	}
